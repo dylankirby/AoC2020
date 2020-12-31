@@ -10,12 +10,12 @@ fn main() {
 
     let lines: Vec<String> = reader.lines().collect::<Result<_, _>>().unwrap();
 
-    let slopes: Vec<(u32, u32)> = vec![(1,1), (3,1), (5,1), (7,1), (1,2)];
+    let xy_slopes: Vec<(u32, u32)> = vec![(1,1), (3,1), (5,1), (7,1), (1,2)];
 
     let num_columns = lines[0].chars().count();
     let num_lines = lines.len();
 
-    for slope in slopes {
+    for slope in xy_slopes {
         let mut num_found: i32 = 0;
         let (x_slope, y_slope) = slope;
 
